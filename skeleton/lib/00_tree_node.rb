@@ -37,3 +37,14 @@ class PolyTreeNode
 # d = Node.new('d')
 #b = Node.new('b', [d]) 
 end
+
+class Searchable
+
+  def dfs(nodes)
+    #base return
+    
+
+
+
+  end
+end
