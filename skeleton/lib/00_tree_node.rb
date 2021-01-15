@@ -1,6 +1,20 @@
 require 'byebug'
 
+module Searchable
+
+  def dfs(target_value)
+    #base return
+    
+
+
+  end
+end
+
+
+
 class PolyTreeNode
+
+  include Searchable
 
   attr_reader :parent, :children, :value
 
@@ -31,6 +45,7 @@ class PolyTreeNode
   end
 
   def remove_child(child_node)
+    raise 'not a child of this node' if !self.children.include?(child_node)
     child_node.parent = nil
   end
 
@@ -38,13 +53,3 @@ class PolyTreeNode
 #b = Node.new('b', [d]) 
 end
 
-class Searchable
-
-  def dfs(nodes)
-    #base return
-    
-
-
-
-  end
-end
