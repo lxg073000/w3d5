@@ -24,26 +24,26 @@ describe PolyTreeNode do
 
   describe "#parent=" do
     before do
-      node2.parent = node1
-      node3.parent = node1
+      node2.parent = node1 #node2.parent(node1)
+      node3.parent = node1 #node3.parent(node1)
     end
 
     it "should set a node's parent to the passed node" do
-      expect(node2.parent).to equal(node1)
-      expect(node3.parent).to equal(node1)
+      expect(node2.parent).to equal(node1) #self.parent == node1
+      expect(node3.parent).to equal(node1) #self.parent == node1
     end
 
     it "should add the child node to the passed node's children" do
-      expect(node1.children).to eq([node2, node3])
+      expect(node1.children).to eq([node2, node3]) #self.children == [node2, node3]
     end
 
-    it "does not add the same node twice" do
-      node3.parent = node1
-      expect(node1.children).to eq([node2, node3])
+    it "does not add the same node twice" do 
+      node3.parent = node1 
+      expect(node1.children).to eq([node2, node3]) 
     end
 
-    it "handles nil without issue" do
-      node2.parent = nil
+    it "handles nil without issue" do 
+      node2.parent = nil 
       expect(node2.parent).to be_nil
     end
 
