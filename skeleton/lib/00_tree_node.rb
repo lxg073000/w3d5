@@ -9,9 +9,8 @@ class PolyTreeNode
 
   def value
     
-    # parent = "string node"
-    # children = arr of nodes
-    # value = parent node
+    value = self
+    
   end
 
 
