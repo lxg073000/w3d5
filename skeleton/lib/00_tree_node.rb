@@ -9,6 +9,20 @@ class PolyTreeNode
     @value = value
   end
 
+  def parent=(parent)
+    if self.parent != nil
+      parent.children.delete!(self)
+    end
+      @parent = parent
+
+    if !parent.children.include?(self)
+      parent.children << self
+    end
+
+  end
+
+
+
 
 # d = Node.new('d')
 #b = Node.new('b', [d]) 
