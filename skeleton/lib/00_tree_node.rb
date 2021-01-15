@@ -7,6 +7,12 @@ class PolyTreeNode
     @children = children
   end
 
+  def value
+    
+    # parent = "string node"
+    # children = arr of nodes
+    # value = parent node
+  end
 
 
 end
